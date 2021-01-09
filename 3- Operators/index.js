@@ -304,6 +304,7 @@
   //Multiples of 5: 5, 10
 console.log("oi");
 console.log('oi    1'); 
+console.log('oi    2'); 
 //console.log('Total of multiple sum:',sum(10));
 //
 //function sum(limit) {
