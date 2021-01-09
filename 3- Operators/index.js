@@ -302,12 +302,7 @@
 
   //Multiples of 3: 3, 6, 9.
   //Multiples of 5: 5, 10
-console.log("oi");
-console.log('oi    1'); 
-console.log('oi    2'); 
-console.log('oi    3'); 
-console.log('oi    4'); 
-console.log('oi    5'); 
+
 //console.log('Total of multiple sum:',sum(10));
 //
 //function sum(limit) {
