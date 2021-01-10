@@ -1,11 +1,11 @@
 {//28.1  - IF ELSE
 
 //Conditionals Statements
-//if (conditional){
-//    statement
-//}
+//if (conditional){ //(true)
+//    (execute)statement
+//} //(inside curly braces is a block of code , use if has multiples statements)
 //else if (anotherConditional){
-//    statement
+//    statement  //(theres no limition for this 'else if')
 //}
 //else if (yetAnotherCondition){
 //    statement
@@ -22,18 +22,18 @@
 //
 //if (hour >= 6 && hour <12) 
 //    console.log('Good Morning!')
+
 //else if( hour >= 12 && hour <18) 
 //    console.log('Good Afternoon!')
+
 //else
 //    console.log(('Good Evening!'))
 }
 
 {//29.2 -  Switch and Case
-/*
 
-//let role (a string default mode is undefined)
+// in let role (a string default mode is undefined)
 //let role = 'moderator';
-//
 //switch (role) {
 //    case 'guest':
 //        console.log('Guest User');
@@ -45,21 +45,22 @@
 //
 //    default:
 //        console.log('Unknown User');
+//        // isnt necessary a "break", cuz ,at this points, the control will automatically
+//        // get out of this switch block 
 //}
-
 
 //ANOTHER WAY CLEANER THAN SWITCH AND CASE
 //if(role === 'guest') console.log('Guest');
 //else if(role === 'moderator') console.log('Moderator User');
 //else console.log('Unknown User');
-*/
 }
 
 {//30.3 -  For
+// types of loops: For; While; Do...While; For...in; For...of;
 
 ////for(initialExpression; Condition; incrementExpression)
 //        statment
-//for (let i = 0; i < 5; i++) {
+// for (let i = 0; i < 5; i++) {
 //for (let i = 1; i <= 5; i++) {    //Reordenated
 //    console.log("Hello word!!", i)
 //}
