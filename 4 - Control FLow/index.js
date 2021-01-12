@@ -233,25 +233,25 @@
 //    //Not divisible by both => same input
 //    //Not a number => 'Not a number'
 
-//let number = 
-
-//const output = fizzBuzz(number) ;
-//console.log(output);
+//number = 90
 //
-//function fizzBuzz(input) {
-//    if (typeof input !== 'number')
-//        return 'Not a number!'; //NaN is a special value 
-//        
-//    if (( input % 3 === 0 ) && (input % 5 === 0)) //(the complex argument most be first )
-//        return 'FizzBuzz';
+//const output = fizzBuzz(number)
+//console.log(output); 
 //
-//    if (input % 3 === 0 )
-//        return 'Fizz';
+//function fizzBuzz (input){
 //
-//    if (input % 5 === 0 )
-//        return 'Buzz';
+//    if ( typeof input !== 'number')
+//        return 'Not a number!'; // return NaN;
+//            
+//    if (( input % 3 === 0) &&(input % 5  === 0))
+//        return 'FizzBuzz!';
+//    
+//    if ( input % 3  === 0)
+//        return 'Fizz!';
 //
-//    return input;    
+//    if ( input % 5  === 0)
+//        return 'Buzz!';
+//    return input;
 //}
 }
 
@@ -262,59 +262,79 @@
 // Math.floor(1.3)
 // 12 points - > suspended
 
-//checkSpeed(129);
+//checkSpeed(90); 
 //
-//function checkSpeed (speed) {
-//    const speedLimit = 70; 
+//function checkSpeed(speed) {
+//
+//    const speedLimit = 70;
 //    const kmPerPoint = 5;
 //
 //    if (speed < speedLimit + kmPerPoint) {
-//        console.log('Ok');
-//        return;    
+//        console.log('OK');
+//        return;
 //    }
-//
 //    const points = Math.floor((speed - speedLimit) / kmPerPoint);
-//    if (points >= 12)
+//    if(points >= 12)
 //        console.log('License Suspended!');
-//    else 
-//        console.log('Points', points);
+//    else
+//        console.log('Points:',points);
 //}
 }
 
 {//41. 14- Exercise- Even and Odd
-
-//showNumbers (10); 
+// showNumbers(10);
+// 
+// function showNumbers(limit){
+//    for (let i = 0; i <= limit; i++ ){
+//    //    if ( i % 2 === 0 ) console.log(i ,'Even');
+//    //    else console.log(i, 'Odd');
 //
-//function showNumbers(limit) {
-//    for (let i = 0; i <= limit; i++) {
-//        //if (i % 2 === 0) console.log(i, 'EVEN');
-//        //else console.log(i, 'ODD');
-//        
-//        //Noiseless
-//        const message = (i % 2 === 0) ? 'EVEN': 'ODD'
-//        console.log(i, message);
+//    const message = ( i % 2 === 0 ) ? 'Even' : 'Odd'
+//    console.log(i , message);
 //    }
-//}
+//} 
 }
 
 {//42. 15- Exercise- Count Truthy
 
- //Falsy 
- //undefined
- //null
- //''
- //false
- //0
- //NaN
- //My task here is create an function which does count all Truthy values
+ //Falsy:
+ //-undefined
+ //-null
+ //-''
+ //-false
+ //-0
+ //-NaN
 
-//const array = [0, null, undefined, '', 2, 3//////onsole.log(countTruthy(array//
-//function countTruthy(array) {
-//   let count = 0 
+// const array = [0, 0, null, undefined, '', 1, 2, 3]
+//
+// console.log(countTruthy(array))
+//
+// function countTruthy(array){
+//    let count = 0
+//    for (let value of array) // for...of coz its used to iterate an object
+//        if (value) // if its a value, so its true or truthy
+//            count ++;
+//    return count;
+//}
+ 
+// console.log('There were(was) found', countTruthy(array), 'truthy value(s) and', countFalsy(array),'falsy value(s)!')
+//  
+// function countTruthy(array) {
+//     let count = 0 
+//     for (let value of array)
+//     if (value) //!beforme something = negaction   
+//     // pour way -> if(value !== false || value !== undefined)
+//     count++;
+//     return count;
+//    }
+//    
+//function countFalsy(array) {
+//    let count = 0 
 //       for (let value of array)
-//           if (!value) //! negaction   // pour way -> if(value !== false || value !== undefined)
+//           if (!value) //!beforme something = negaction   
+//            // pour way -> if(value !== false || value !== undefined)
 //               count++;
-//       return console.log ('Were(was) found', count, 'value(s)!' )
+//        return count;
 //   }
 }
 
