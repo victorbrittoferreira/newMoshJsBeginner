@@ -76,13 +76,16 @@
 }
 
 {//31. 4- While Loop;
+// in ForLoops, the loop variable is a part of the loop variable itself,
+//But in Whileloops, you have to declare this i variable externally. 
 
-//// This 'I' is not the same previous 'I'.
-//let i = 0;
+// This 'I' is not the same previous 'I'( in previous lesson "ForLoop").
+//let i = 0; //()
+// While( condition, like in ForLoop)
+//the condition is checked every cicle until at end.
 //while (i <= 5) {
 //    if (i % 2 !== 0) console.log(i);
 //    i++;
-//}
 }
 
 {//32. 5- Do...While
@@ -98,20 +101,31 @@
 
 {//33. 6- Infinite Loops
 
+//1st - E.G.
 //let i = 0
-//while ( i < 5){
+//while ( i < 9999){
 //  console.log(i);
-//}      //i++
-//
+//      //i++;//( whitout the increment operator, its become a IL.)  
+//}  
+
+//2nd - E.G.
 //while (true) {
 //}    
-//let x= 1; 
+
+//3rd - E.G.
+//let x = 0; 
 //do {
-//      //x++;
-//} 
+//    //x++; //( whitout the increment operator, its become a IL.)
+////console.log(x);
 //
-//  while(x < 5);
-//  for(let i = 0; i < 10;)
+//}while(x < 5);
+//
+//console.log(x);    
+
+
+//4th - E.G.
+//for(let i = 1; i < 10;//i++)  <<<//( whitout the increment operator, its become a IL.)
+//console.log(i);  
 }
 
 {//34. 7- For...In (Used to iterate in properties)
@@ -121,73 +135,103 @@
 //    age: 30,
 //};
 //for (let key in person)
-//    console.log(key, person[key]);
-////Reminder, to access properties there is 2 ways, Dot Notation and Bracket Notation. Did not understand
-//
+//  console.log(key);
+                //,'read "values of key of person"'
+//  console.log(key, person[key]); //once read, it is forgotten in memory. so it is not possible to print the same variable twice in row
+//Reminder, to access properties there is 2 ways:
+
+//Dot Notation 
+//-Use the dot.notation to display the value of this property, in other words,
+//  we can't do something like this >>>console.log(key, person.key);<<<, 
+//  because we don't have a property called key in the person object.
+//  So that's when we use the bracket notation. 
+//  So we add square brackets,>>>console.log(key, person[key])<<<
+//  and pass key as the name of the target property.
+
+//Bracket Notation. (its behave like a wildcard[joker])>>>(key, person[key]))
+//-Use the bracket notation when we don't know ahead of time, 
+//  at the time of writing code, what property we're going to access.
+//  Perhaps the name of the target property is calculated at run time.
+//  An E.G.: When we iterate over the properties of the person object,
+//   in each iteration thevalue key is going to be different
+
+// Another exemple
 //const colors = ['red', 'green', 'blue'];
 //
 //for (let index in colors)
+////    console.log(index);
+//                    //,'read "colors of index"'
 //    console.log(index, colors[index]);
 }
 
-{//35. 8- For...of
-
-//for (let color of colors)
-//    console.log(color);
+{//35. 8- For...of (new way to do the same thing in "For...in")
+//const colors = ['red', 'green', 'blue'];
 //
+//for (let color of colors)
+//    //console.log(color);
+//    console.log(color);
+    
 }
 
 {//36. 9- Break and Continue
 
 //console.log("Break an Continue");
-//let i = 0;
+//let i = 1;
 //while (i <= 10) {
 //    //if (i === 5) break;// Break go out of loop.
 //    if (i % 2 === 0) { //Odd numbers
 //        i++;
-//        continue; //Continue go to the next iteration.
+//        //continue; //Continue go to the next iteration...thats the opposite of break
 //    }
+//
 //    console.log(i);
 //    i++; 
 //}
 }
 
-{//37. 10- Max of Two Numbers
+{//37. 10- Exercise-  Max of Two Numbers
 
 // Write a functions that takes two numbers and returns the maximum of two.
+// RESOLUTION: Ternary or IF
 
-//    let number = max(3 , 2);
-//    console.log(number);
+//let number = max (5, 3);
+//console.log('Greater: '+number)
 //
-//    function max (a , b) {
-//        //if(a > b) return a;
-//        //return b;
-//
-//    //Using a cleaner conditional
-//    //(coditional) true : false
-//    return (a > b) ? a : b 
-//    }
+//function max (a, b){
+//    if (a > b) return a;
+//    return b;
+
+      //(coditional) true : false
+//return  (a > b) ? a : b;
+//}
 }
 
 {//38. 11- Exercise- Landscape or Portrait
 
-//                       (width, height)   
-//let number = (555 , 33)
-//console.log(isLandScape(number));
+//          (width, height)   
+//let x = (140) 
+//let y = (10) 
+//console.log(isLandScape(x , y));
 //
 //function isLandScape(width, height) {
-//    // like previous exercise
-//    return (width > height);
+        // like previous exercise
+    //if (width > height) return true;
+    //return false; 
+                            //(its not necessary)
+    //if ( width > height) return 'Landscape';
+    //return 'Portrait';
+    
+    //return (width > height)? 'Portrait' : 'Landscape' ;
+    //return (width > height);//(true or false)
 //}
 }
 
 {//39. 12- Exercise- FizzBuzz
-
 //    //Divisible by 3 => Fizz    
 //    //Divisible by 3 => Buzz
 //    //Divisible by both => FizzBuzz
 //    //Not divisible by both => same input
-//    //Not a number => 'Not a numberz'
+//    //Not a number => 'Not a number'
 
 //let number = 
 
