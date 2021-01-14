@@ -128,7 +128,7 @@
 //console.log(i);  
 }
 
-{//34. 7- For...In (Used to iterate in properties)
+{//34. 7- For...In (Used to iterate the properties)
 
 //const person = {
 //    name: 'Mosh',
@@ -164,7 +164,7 @@
 //    console.log(index, colors[index]);
 }
 
-{//35. 8- For...of (new way to do the same thing in "For...in")
+{//35. 8- For...of (Use to iterate the properties' values)
 //const colors = ['red', 'green', 'blue'];
 //
 //for (let color of colors)
@@ -316,7 +316,7 @@
 //            count ++;
 //    return count;
 //}
- 
+//______________________________________________________________ 
 // console.log('There were(was) found', countTruthy(array), 'truthy value(s) and', countFalsy(array),'falsy value(s)!')
 //  
 // function countTruthy(array) {
@@ -352,7 +352,7 @@
 //showProperties(movie);
 //
 //function showProperties(obj) {
-//    for(let key in obj) //for each key(objet) in showProperties' objet 
+//        for(let key in obj) //for each key(objet) in showProperties' objet 
 //        //console.log(key)
 //        if (typeof obj[key] ==='string') //if type of objets' objet is === a 'string'
 //            console.log(key,':',obj[key]);//print the showProperties' objets' objet 
@@ -365,12 +365,14 @@
 
 {//44. 17- Exercise- Sum of Multiples 3 and 5
 
-  //Multiples of 3: 3, 6, 9.
-  //Multiples of 5: 5, 10
+//Multiples of 3: 3, 6, 9.
+//Multiples of 5: 5, 10
 
 //console.log('Total of multiple sum:',sum(10));
 //
 //function sum(limit) {
+//let sum = 0 
+
 //    let sum = 0
 //      //i = multiple   //limit of multiple = 10
 //    for (let i = 0; i <= limit; i++)
@@ -392,18 +394,24 @@
 //80-89:B
 //90-100:A
 
-//math = 20
-//compSci = 10
-//logic = 50
-//
-//const marks = [math, compSci, logic];
-//
-//console.log('Mark:',calculateGrade(marks));
+const marks = [95, 95, 300];
+
+console.log('Mark:',calculateGrade(marks));
 //console.log('Mark:',calculateAvarage(array));
 
-{
-//function calculateGrade(marks){
+{//function calculateAverage(array){ 
+    
+//    let sum = 0;
+//    for ( let value of array )
+//    sum += value;
+//    
+//    console.log(sum);
+//    
+//}
 
+//function calculateGrade(marks){
+}
+{
 //       let sum = 0
 //
 //    for ( let mark of marks)
@@ -423,14 +431,12 @@
 // S I N G L E   R E S P O N S A B I L I T Y   P R I N C I P L E 
 
 function calculateAvarege(array) {
-      
-    let sum = 0;
+let sum = 0;
     for ( let value of array)
         sum += value; 
     
     return sum / array.length;
 }
-
         
 function calculateGrade(marks){
     const average = calculateAvarege(marks);
@@ -440,7 +446,7 @@ function calculateGrade(marks){
     if (average <80) return 'C';
     if (average <90) return 'B';
     if (average <=100) return 'A'
-        return 'He is fuck genius!'
+        return 'Fuck genius!'
 }
 }
 
