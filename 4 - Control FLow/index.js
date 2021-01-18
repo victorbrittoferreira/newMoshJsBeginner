@@ -394,24 +394,13 @@
 //80-89:B
 //90-100:A
 
-const marks = [95, 95, 300];
-
-console.log('Mark:',calculateGrade(marks));
-//console.log('Mark:',calculateAvarage(array));
-
-{//function calculateAverage(array){ 
-    
-//    let sum = 0;
-//    for ( let value of array )
-//    sum += value;
-//    
-//    console.log(sum);
-//    
-//}
-
-//function calculateGrade(marks){
-}
-{
+//const marks = [95, 95, 90];
+//
+////console.log('Mark:',calculateAvarege(array));
+//console.log('Mark:',calculateGrade(marks));
+//console.log('Avarege:',calculateAvarege(marks))
+//
+//{
 //       let sum = 0
 //
 //    for ( let mark of marks)
@@ -427,69 +416,73 @@ console.log('Mark:',calculateGrade(marks));
 //                return 'He is fuck genius!'
 //    }
 //}
+//}
+//// S I N G L E   R E S P O N S A B I L I T Y   P R I N C I P L E 
+//
+//function calculateAvarege(array) {
+//    let sum = 0;
+//    
+//    for ( let value of array)
+//    sum += value;   
+//    
+//    return sum / array.length;
+//    //return average;
+//}
+//function calculateGrade(marks){
+//    const average = calculateAvarege(marks);
+//    if (average <60) return 'F';
+//    if (average <70) return 'D';
+//    if (average <80) return 'C';
+//    if (average <90) return 'B';
+//    if (average <=100) return 'A'
+//    return
+//    //return 'Fuck genius!'
+//}
 }
-// S I N G L E   R E S P O N S A B I L I T Y   P R I N C I P L E 
 
-function calculateAvarege(array) {
-let sum = 0;
-    for ( let value of array)
-        sum += value; 
-    
-    return sum / array.length;
-}
-        
-function calculateGrade(marks){
-    const average = calculateAvarege(marks);
-        console.log('Avarage:',average)
-    if (average <60) return 'F';
-    if (average <70) return 'D';
-    if (average <80) return 'C';
-    if (average <90) return 'B';
-    if (average <=100) return 'A'
-        return 'Fuck genius!'
-}
-}
+{//46. 19- Exercise - Stars( NESTED LOOP - INNER LOOP)
 
-{//46. 19- Exercise - Stars
-
-//showStars(10)
+//showStars(9)
 //
 //function showStars(rows){
-//    for(let row = 1; row <= rows; row++) {
-//        let pattern = '';
-//        for (let i = 0; i < row; i++)
-//            pattern += '*';
-//        console.log(pattern);
-//    }
+//        
+//    for( let row = 1; row <= rows; row++){
+//         let pattern = '';
+//            //start 0 coz it hs been reindexed(1) in previous loop
+//        for(let i = 0; i < row; i++)
+//            pattern += 'Hue Hue BR BR ';
+//        console.log(row, pattern);
 //}
 }
 
 {//47. 20- Exercise - Prime Numbers
-
-//showPrimes(20); 
+{
+//showPrimes(99) 
 //function showPrimes(limit) {
 //    for(let number = 2; number <= limit; number++){ 
 //
-//        let isPrime= true;
+//        let isPrime = true;
 //        for (let factor = 2; factor < number;factor++){
 //            if(number % factor === 0){
-//                isPrime = false 
+//                isPrime = false; 
 //                break; 
 //            }          
 //        }
 //        if (isPrime)console.log(number);
 //    }
-//} 
-
+//}
+}
+//showPrimes(20)
+//
 //function showPrimes(limit) {
 //    for (let number = 2; number <= limit; number++)
-//        if(isPrime(number)) console.log( number);
+//        if(isPrime(number)) console.log(number);
 //}        
+//
 //function isPrime(number) { 
 //    for (let factor = 2; factor < number; factor++)
-//        if (number % factor === 0)
+//        if (number % factor === 0) // cant be a ternary, coz i must modify the state of the memor
 //            return false;
-//
-//    return true;
-//
+//        return true;
+//}
 }
