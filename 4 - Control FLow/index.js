@@ -165,6 +165,12 @@
 }
 
 {//35. 8- For...of (Use to iterate the properties' values)
+//Difference between for...of and for...in: both of statements iterate over something.
+//The main difference between them is in what they iterate over.
+//The for...in statement iterates over the enumerable properties of an object, in an arbitrary order.
+//The for...of statement iterates over values that the iterable object defines to be iterated over.
+//E.G.iterable objects>> Array, Map, Set, ArgumentsObjects
+
 //const colors = ['red', 'green', 'blue'];
 //
 //for (let color of colors)

@@ -196,14 +196,145 @@
 
 {//54. 7- Value vs. Reference Types
 
+//Value Types    Reference Types
+//-Number         -Object
+//-String         -Function
+//-Boolean        -Array  
+//-Symbol
+//-undefined
+//-null
 
-  
+//-Primitives are copied by their value, 
+//-Reference types or Objects are copied by their reference.
+
+
+//let x = 10;
+//let y = x;
+//
+//x = 20
+
+//let x = {value: 10};
+//let y = x;
+//
+//x.value = 20; 
+
+//That object is stored somewhere else in the memory, and the address
+//of that memory location is stored inside that memory variable.
+//So y is dependent on x, coz ,both, x and y, are pointing to the same,
+
+////let number = 10;
+//let obj = {value: 10}
+
+////function increase(number){   // when we call increase and pass this number variable
+////                              //it's value is copied into this parameter that is
+////                              //local in this function. So this variable here is 
+////                              //completely independent of this other number variable
+////  number++; 
+////} //after this function, this number is going to go out of the scope.
+
+//function increase(obj){
+//  obj.value++;
+//}
+
+////increase(number);
+////  console.log(number);
+
+//increase(obj);
+//  console.log(obj);
 } 
  
 {//55. 8- Enumerating Properties of an Object
+// For... let key ...In circle with this we can iterate over all the properties and methods of an object
+//But,the new For...of we can iterate only iterable objects,e.g.: Array, Map, Set, ArgumentsObjects and others...
+
+//const circle = {
+//  radius: 1,
+//  draw() {
+//    console.log('draw');
+//  }
+//};
+
+////Console only the keys
+//it iterate over all the properties and methods of an object.
+//for(let key in circle)
+//console.log(key);
+
+////Console the key and value
+//for(let key in circle)
+//  console.log(key, circle[key]);
+
+//object inst iterable, we need use a method
+//for (let key of circle)
+//  console.log(key);
+
+//thats method, Object.keys(), will get all the keys in our 
+//circle object, and this will return an array. Its a built
+//in constructor function
+
+//for (let key of Object.keys(circle))
+//console.log(key);
+
+//Such the previous method, that is translated into a call to
+//-this constructor function. So when we create an object using
+//-the object literal syntax, like this, value is 1, internally, 
+//-that is translated to a call to this object constructor function
+
+//function Object () {}
+//const x = { value: 1};
+//const x = new Object();
+
+//Using the keys method, and this method returns a string array
+// which contains all the properties and methods in this object.
+//Object.keys()
+
+//Entries method
+//for (let entry of Object.entries(circle))
+//  console.log(entry);
+
+// to see if a given property or method exists in an object we use the >in< operator.
+//if('radius' in circle) console.log('Yes');
+
 }
 
 {//56. 9- Cloning an Object
+
+const circle = { 
+  radius: 1,
+  draw() {
+    console.log('draw');
+  }
+};
+
+
+  //1st way ...too old.
+//remember, {} = empty
+//const another = {};
+
+//Use the ForIn loop to iterate over all the properties in an object, 
+//and copy them into this new object >>empty{}
+
+//for (let key in circle) 
+////Use the bracket notation [] to access a property with a given key.
+//  another[key] = circle [key];
+//  another ['radius'] = circle ['radius']
+
+  //2nd way to clone an object,we can pass multiple source objects
+
+//This target object pass here doesn't have to be an empty object, 
+//it can be an existing object, it can have 1 or more properties or methods.
+
+//const another = Object.assign({}, circle); 
+//const another = Object.assign({
+//  color: 'yellow'
+//}, circle); 
+
+  //3rd way to clone it...simple and new way
+
+//const another = {...circle };
+
+console.log(another);
+
+
 }
 
 {//57. 10- Garbage Collection
