@@ -324,9 +324,9 @@ const circle = {
 //it can be an existing object, it can have 1 or more properties or methods.
 
 //const another = Object.assign({}, circle); 
-//const another = Object.assign({
-//  color: 'yellow'
-//}, circle); 
+const another = Object.assign({
+  color: 'yellow'
+}, circle); 
 
   //3rd way to clone it...simple and new way
 
