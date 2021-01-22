@@ -298,12 +298,12 @@
 
 {//56. 9- Cloning an Object
 
-const circle = { 
-  radius: 1,
-  draw() {
-    console.log('draw');
-  }
-};
+//const circle = { 
+//  radius: 1,
+//  draw() {
+//    console.log('draw');
+//  }
+//};
 
 
   //1st way ...too old.
@@ -324,20 +324,23 @@ const circle = {
 //it can be an existing object, it can have 1 or more properties or methods.
 
 //const another = Object.assign({}, circle); 
-const another = Object.assign({
-  color: 'yellow'
-}, circle); 
+//const another = Object.assign({
+//  color: 'yellow'
+//}, circle); 
 
   //3rd way to clone it...simple and new way
 
 //const another = {...circle };
 
-console.log(another);
+//console.log(another);
 
 
 }
 
 {//57. 10- Garbage Collection
+
+  
+
 }
 
 {//58. 11- Math
