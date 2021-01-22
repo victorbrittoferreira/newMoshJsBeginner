@@ -307,15 +307,18 @@
 
 
   //1st way ...too old.
-//remember, {} = empty
+//remember, {} = empty/ new object
 //const another = {};
 
 //Use the ForIn loop to iterate over all the properties in an object, 
-//and copy them into this new object >>empty{}
+//and copy them into this new object >>empty/mew object{}
 
 //for (let key in circle) 
 ////Use the bracket notation [] to access a property with a given key.
+// clon[key] = source object[key]
 //  another[key] = circle [key];
+
+//Also, the values of the property of the source object are copied too 
 //  another ['radius'] = circle ['radius']
 
   //2nd way to clone an object,we can pass multiple source objects
@@ -339,7 +342,7 @@
 
 {//57. 10- Garbage Collection
 
-  
+
 
 }
 
